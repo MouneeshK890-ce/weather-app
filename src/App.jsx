@@ -3,6 +3,7 @@ import { IoSearchCircle } from "react-icons/io5";
 import { useState } from "react";
 import WeatherDetails from "./Components/WeatherDetails";
 import { OrbitProgress } from "react-loading-indicators";
+
 // Images
 import weather from "./assets/wea.png";
 import clearIconDay from "./assets/clearIconDay.png";
@@ -20,6 +21,8 @@ import mist from "./assets/mist.png";
 
 import  noSignal from './assets/no-signal.png'
 import cityNot from "./assets/citynotfound.png";
+import Header from "./Components/Header";
+import Footer from './Components/Footer'
 
 function App() {
   let apiKey = `dd57a40f1fec450fc40c48c3dfced756`;
@@ -108,6 +111,9 @@ function App() {
   };
 
   return (
+
+    <>
+    <Header/>
     <section className="container">
       <section className="input-container">
         <input
@@ -156,6 +162,8 @@ function App() {
         </div>
       )}
     </section>
+    <Footer/>
+    </>
   );
 }
 

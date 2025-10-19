@@ -1,6 +1,5 @@
 import humidityIcon from "../assets/humidity.png";
 import windIcon from "../assets/wind.png";
-import Footer from "./Footer";
 
 const WeatherDetails = ({
   icon,
@@ -46,7 +45,6 @@ const WeatherDetails = ({
           </div>
         </div>
       </section>
-        <Footer />
     </>
   );
 };
