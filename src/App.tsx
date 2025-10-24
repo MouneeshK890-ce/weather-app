@@ -1,6 +1,6 @@
 import "./App.css";
 import { IoSearchCircle } from "react-icons/io5";
-import { useState } from "react";
+import { useState, ChangeEvent, KeyboardEvent } from "react";
 import WeatherDetails from "./Components/WeatherDetails";
 import { OrbitProgress } from "react-loading-indicators";
 
@@ -27,21 +27,23 @@ import Footer from './Components/Footer'
 function App() {
   let apiKey = `dd57a40f1fec450fc40c48c3dfced756`;
 
-  const [text, setText] = useState("");
-  const [icon, setIcon] = useState(weather);
-  const [temp, setTemp] = useState(0);
-  const [city, setCity] = useState("city");
-  const [country, setCountry] = useState("country");
-  const [lat, setLat] = useState(0);
-  const [long, setLong] = useState(0);
-  const [humidity, sethumidity] = useState(0);
-  const [wind, setWind] = useState(0);
+  const [text, setText] = useState<string>("");
+  const [icon, setIcon] = useState<string>(weather);
+  const [temp, setTemp] = useState<number>(0);
+  const [city, setCity] = useState<string>("city");
+  const [country, setCountry] = useState<string>("country");
+  const [lat, setLat] = useState<number>(0);
+  const [long, setLong] = useState<number>(0);
+  const [humidity, sethumidity] = useState<number>(0);
+  const [wind, setWind] = useState<number>(0);
 
-  const [cityNotFound, setCityNotFound] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [cityNotFound, setCityNotFound] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const weatherIconMap = {
+  const [weatherX, setWeatherX] = useState<string>("");
+
+  const weatherIconMap: Record<string, string> = {
     "1dn": clearIconDay,
     "01n": clearIconNight,
     "02d": cloudIconDay,
@@ -62,7 +64,7 @@ function App() {
     "50n": mist,
   };
 
-  const search = async () => {
+  const search = async (): Promise<void> => {
     setLoading(true);
 
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${apiKey}&units=Metric`;
@@ -71,7 +73,7 @@ function App() {
       let response = await fetch(url);
       let data = await response.json();
 
-      // console.log(data);
+      console.log(data);
 
       if (data.cod === "404") {
         console.error("City not Found");
@@ -87,27 +89,26 @@ function App() {
       setLong(data.coord.lon);
       setCity(data.name);
       setCountry(data.sys.country);
+      setWeatherX(data.weather[0].description);
 
       const weatherIconCode = data.weather[0].icon;
 
       setIcon(weatherIconMap[weatherIconCode] || weather);
       setCityNotFound(false);
-    } catch (error) {
-      console.error("An error occured", error.message);
-      setError("An error occurred while fetching weather data");
+    } catch (error: unknown) {
+     const message = error instanceof Error ? error.message : "An error occured while fetching data";
+     setError(message);
     } finally {
       setLoading(false);
     }
   };
 
-  const handleCity = (e) => {
+  const handleCity = (e: ChangeEvent<HTMLInputElement>) => {
     setText(e.target.value);
   };
 
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter") {
-      search();
-    }
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") search();
   };
 
   return (
@@ -138,6 +139,7 @@ function App() {
           long={long}
           humidity={humidity}
           wind={wind}
+          weather={weatherX}
         />
       )}
 

@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bungee&family=Dancing+Script:wght@400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Playwrite+DK+Loopet:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sedan+SC&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bungee&family=Dancing+Script:wght@400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Playwrite+DK+Loopet:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sedan+SC&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background:linear-gradient(to top left, rgb(56, 56, 56), rgb(76, 75, 75), rgb(96, 95, 95), rgb(126, 125, 125));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+   font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .container {
@@ -183,4 +192,14 @@ article{
   font-style: normal;
   color: rgb(215, 215, 200);
    text-shadow: 3px 3px 5px black;
+}
+
+.weather {
+  text-align: center;
+  margin-top: -30px;
+  font-size: 20px;
+  color: #888;
+   font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
 }

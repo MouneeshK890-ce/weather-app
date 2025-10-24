@@ -1,7 +1,19 @@
 import humidityIcon from "../assets/humidity.png";
 import windIcon from "../assets/wind.png";
 
-const WeatherDetails = ({
+interface WeatherDetailsProps {
+  icon: string;
+  temp: number;
+  city: string;
+  country: string;
+  lat: number;
+  long: number;
+  humidity: number;
+  wind: number;
+  weather: string;
+}
+
+const WeatherDetails: React.FC<WeatherDetailsProps> = ({
   icon,
   temp,
   city,
@@ -10,12 +22,14 @@ const WeatherDetails = ({
   long,
   humidity,
   wind,
+  weather,
 }) => {
   return (
     <>
       <section className="image">
         <img src={icon} className="sun" alt="image" />
       </section>
+      <section className="weather">{weather}</section>
       <section className="temp">{temp}°C</section>
       <section className="location">{city}</section>
       <section className="country">{country}</section>
