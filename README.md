@@ -24,18 +24,9 @@ ClimaTrack is a responsive weather application that lets users search any city a
 
 ---
 
-## 📸 Screenshots
-_Add screenshots if available:_
-
-```markdown
-![ClimaTrack Screenshot](./screenshot.png)
-```
-
----
-
 ## ▶️ Demo
-**Live Demo:** _(add your deployed link here — Netlify / Firebase / Vercel)_  
-**Repository:** _(this repository link)_
+**Live Demo:** _((https://mouneesh-climatrack.web.app/))_  
+**Repository:** _([this repository link](https://github.com/MouneeshK890-ce/weather-app))_
 
 ---
 
@@ -44,8 +35,8 @@ _Add screenshots if available:_
 Clone the project:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
-cd REPO-NAME
+git clone https://github.com/MouneeshK890-ce/weather-app.git
+cd weather-app
 ```
 
 Install dependencies:
@@ -96,7 +87,8 @@ Pull requests are welcome — feel free to fork the project and try enhancements
 ## 📧 Contact
 
 **Portfolio:** https://mouneesh-portfolio.web.app  
-**GitHub:**   https://github.com/MouneeshK890-ce
+**LinkedIn:**   https://www.linkedin.com/in/mouneesh-kandhasamy
+**Email:**   mouneesh.kandhasamy@gmail.com
 
 ---
 
