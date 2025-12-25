@@ -1,16 +1,103 @@
-# React + Vite
+# 🌤️ ClimaTrack — Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ClimaTrack is a responsive weather application that lets users search any city and instantly view real-time weather conditions. It focuses on a clean UI, smooth performance, and reliable API integrations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
+- **React**
+- **TypeScript**
+- **REST API (OpenWeather)**
+- **CSS**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🔎 **City search** with instant weather results  
+- 🌍 **Real-time weather data** using OpenWeather API  
+- ⏳ **Loading indicators** for better UX  
+- ⚠️ **Error handling** for invalid cities and network failures  
+- ♻️ **Reusable components** for maintainable code  
+- 🚀 **Optimized rendering** for smooth performance  
+- 📱 **Mobile-first & cross-browser responsive design**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Screenshots
+_Add screenshots if available:_
+
+```markdown
+![ClimaTrack Screenshot](./screenshot.png)
+```
+
+---
+
+## ▶️ Demo
+**Live Demo:** _(add your deployed link here — Netlify / Firebase / Vercel)_  
+**Repository:** _(this repository link)_
+
+---
+
+## 🛠️ Setup & Installation
+
+Clone the project:
+
+```bash
+git clone https://github.com/YOUR-USERNAME/REPO-NAME.git
+cd REPO-NAME
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file and add your OpenWeather API key:
+
+```env
+VITE_WEATHER_API_KEY=your_openweather_api_key
+```
+
+Run the app:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔌 API Reference
+
+This project uses the **OpenWeather API**:  
+https://openweathermap.org/api
+
+You can sign up for a free API key and place it in the `.env` file.
+
+---
+
+## 📚 What I Learned
+
+- Using **TypeScript with React** for safer, strongly-typed code  
+- Handling **API calls** and async data flows  
+- Managing **loading & error states** effectively  
+- Building **reusable UI components**  
+- Improving **performance and responsiveness**
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome — feel free to fork the project and try enhancements.
+
+---
+
+## 📧 Contact
+
+**Portfolio:** https://mouneesh-portfolio.web.app  
+**GitHub:**   https://github.com/MouneeshK890-ce
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
