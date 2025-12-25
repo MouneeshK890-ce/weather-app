@@ -88,7 +88,6 @@ Pull requests are welcome — feel free to fork the project and try enhancements
 
 **Portfolio:** https://mouneesh-portfolio.web.app  
 **LinkedIn:**   https://www.linkedin.com/in/mouneesh-kandhasamy  
-
 **Email:**   mouneesh.kandhasamy@gmail.com
 
 ---
